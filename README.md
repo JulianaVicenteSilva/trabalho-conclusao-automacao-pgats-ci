@@ -122,7 +122,7 @@ Além disso, a pipeline exibe um **resumo inline** na aba **Summary** com a cont
 npm install
 
 # Executar os testes com relatório
-npm test
+npx mocha --reporter mochawesome --reporter-options reportDir=mochawesome-report,reportFilename=mochawesome,html=true,json=true "test/**/*.test.js"
 ```
 
 O relatório será gerado em `mochawesome-report/mochawesome.html`.
