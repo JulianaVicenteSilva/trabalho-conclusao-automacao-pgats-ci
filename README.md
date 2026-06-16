@@ -91,8 +91,10 @@ push / manual / agendado
 Permite acionar a pipeline manualmente pelo botão **"Run workflow"** na aba **Actions** do GitHub, com campo opcional para informar o motivo da execução.
 
 ### Nível 2 — Execução Agendada (`schedule`)
-A pipeline executa automaticamente toda **segunda-feira às 11h UTC (08h BRT)** usando sintaxe cron:  
-`0 11 * * 1` → minuto 0, hora 11, qualquer dia do mês, qualquer mês, dia 1 da semana (segunda).
+A pipeline executa automaticamente em três agendamentos usando sintaxe cron:
+- `0 11 * * 1` → toda segunda-feira às 11h UTC (08h BRT)
+- `*/30 * * * *` → a cada 30 minutos
+- `0 3 17 6 *` → dia 17/06 à meia noite BRT (03h UTC)
 
 ### Nível 3 — Após outra pipeline (`workflow_run`)
 Este nível pode ser implementado adicionando um segundo workflow que use `workflow_run: workflows: ['CI - Testes Automatizados']` para disparar após a conclusão desta pipeline.
