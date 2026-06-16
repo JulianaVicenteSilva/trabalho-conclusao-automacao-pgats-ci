@@ -14,10 +14,14 @@ on:
         required: false
         default: "Execução solicitada manualmente"
 
-  # 3. Execução agendada (toda segunda-feira às 08h00 BRT = 11h00 UTC)
+  # 3. Execução agendada 
   schedule:
-    - cron: "0 11 * * 1"
-
+    # Toda segunda-feira às 08h BRT
+    - cron: "0 11 * * 1" 
+    # A cada 30 minutos  
+    - cron: "*/30 * * * *" 
+    # Hoje (17/06) à meia noite BRT
+    - cron: "0 3 17 6 *"
 jobs:
   testes:
     name: Executar Testes com Relatório
