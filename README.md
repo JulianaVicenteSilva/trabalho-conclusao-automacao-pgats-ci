@@ -147,7 +147,7 @@ O arquivo `test/servicoDePagamento.test.js` contém **5 testes** que cobrem:
 
 ## Evidência de Execução
 
-> *(Substituir pelo screenshot real após a primeira execução bem-sucedida)*
+Pipeline executada com sucesso — 5 testes passando, 0 falhas, relatório gerado.
 
 A pipeline pode ser verificada acessando:  
-`https://github.com/SEU_USUARIO/SEU_REPOSITORIO/actions`
+https://github.com/JulianaVicenteSilva/trabalho-conclusao-automacao-pgats-ci/actions
